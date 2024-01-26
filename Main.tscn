@@ -34,4 +34,12 @@ text = "Click to Connect your Wallet"
 align = 1
 valign = 1
 
+[node name="DetectNewChain" type="Button" parent="."]
+margin_left = 431.0
+margin_top = 358.0
+margin_right = 597.0
+margin_bottom = 419.0
+text = "Detect New Chain"
+
 [connection signal="pressed" from="ConnectWallet" to="." method="_on_ConnectWallet_pressed"]
+[connection signal="pressed" from="DetectNewChain" to="." method="_on_DetectNewChain_pressed"]

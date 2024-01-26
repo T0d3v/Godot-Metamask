@@ -14,6 +14,10 @@ config/name="Godot-Metamask"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+chains_ID="*res://chains_ID.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
