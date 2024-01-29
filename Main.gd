@@ -1,8 +1,8 @@
 extends Control
 
 
-var window = JavaScript.get_interface("window")
-var ethereum = JavaScript.get_interface("ethereum")
+var window: JavaScriptObject = JavaScript.get_interface("window")
+var ethereum: JavaScriptObject = JavaScript.get_interface("ethereum")
 #var provider = JavaScript.get_interface("provider")
 #var array = JavaScript.get_interface("array")
 
@@ -13,11 +13,11 @@ var wallet_address = ""
 var chain_name = ""
 var token_symbol = ""
 
-var connect_callback = JavaScript.create_callback(self, "connect_wallet")
-var get_current_chain_callback = JavaScript.create_callback(self, "_get_current_Chain")
-var new_chain_callback = JavaScript.create_callback(self, "on_chain_changed")
-var get_balance_callback = JavaScript.create_callback(self, "get_balance")
-var get_token_balance_callback = JavaScript.create_callback(self, "get_token_balance")
+var connect_callback: JavaScriptObject = JavaScript.create_callback(self, "connect_wallet")
+var get_current_chain_callback: JavaScriptObject = JavaScript.create_callback(self, "_get_current_Chain")
+var new_chain_callback: JavaScriptObject = JavaScript.create_callback(self, "on_chain_changed")
+var get_balance_callback: JavaScriptObject = JavaScript.create_callback(self, "get_balance")
+var get_token_balance_callback: JavaScriptObject = JavaScript.create_callback(self, "get_token_balance")
 
 func _on_ConnectWallet_pressed(): # Connect the wallet using Ethers.js (JS in Export -> HTML5 -> Head include)
 	window.connectMM().then(connect_callback)
